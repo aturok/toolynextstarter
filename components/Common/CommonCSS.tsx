@@ -57,6 +57,10 @@ export const CommonCSS = css`
     body {
         padding-top: ${HeaderHeight}px;
     }
+
+    html {
+        scroll-behavior: smooth;
+    }
         
     * {
         box-sizing: border-box;

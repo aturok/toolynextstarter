@@ -3,6 +3,7 @@ import { HeaderVerticalPadding, HeaderLogoSize, containerDarkShadow, ContainerSi
 import { themeColor } from '../Theme';
 import { device } from '../Media.styles';
 import { facebooklink, emailaddress } from '../../constants/constants';
+import Menu from './Menu';
 
 const Container = styled.div`
     position: fixed;
@@ -57,6 +58,11 @@ const Container = styled.div`
         @media ${device.s} {
             display: none;
         }
+    }
+
+    & > :nth-child(2) {
+        flex-grow: 1;
+        margin-left: 50px;
     }
 `;
 
@@ -123,6 +129,8 @@ export default () => {
                 <Line />
                 <Motto><span>find</span><span>the best </span><span>site starter</span></Motto>
                 </div>
+
+                <Menu />
 
                 <div>
                     <LinksBlock />
