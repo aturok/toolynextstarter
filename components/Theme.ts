@@ -1,3 +1,5 @@
+import { generateKeyPair } from "crypto";
+
 const colorsBase = {
     background: '#fcfcfc',
     primary: '#336b87',
@@ -24,6 +26,7 @@ const colorsSemantic = {
     primaryButtonText: colorsBase.textWhite,
     separator: colorsBase.grayDim,
     footerBackground: colorsBase.shadow,
+    tableHeader: colorsBase.gray,
 };
 
 export const theme = {

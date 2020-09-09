@@ -6,6 +6,8 @@ import { Main } from '../components/Common/Common.styles';
 
 import { ExampleBlock } from '../components/Main/ExampleBlock';
 import { ExampleForm } from '../components/Main/ExampleForm';
+import { Separator } from '../components/primitive/Separator';
+import { ExampleTableBlock } from '../components/Main/ExampleTableBlock';
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
             <ExampleBlock />
             <ExampleForm />
             <ExampleBlock />
+            <Separator />
+            <ExampleTableBlock />
         </Main>
 
         <Footer />
