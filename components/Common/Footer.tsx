@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { CenteredContainer, containerShadow } from './Common.styles';
 import { themeColor } from '../Theme';
 import { emailaddress } from '../../constants/constants';
+import { Scripts } from './Scripts';
 
 const Attribution = styled.p`    
 `;
@@ -33,8 +34,6 @@ export default () => {
             <Attribution>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="blank">www.flaticon.com</a></Attribution>
             <Attribution>Photo by Ave Calvar Martinez from Pexels</Attribution>
             
-            <script src="/js/jquery.min.js"></script>
-            <script src="/js/owl.carousel.min.js"></script>
-            <script src="/js/init.js"></script>
+            <Scripts />
         </Container>);
 }

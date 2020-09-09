@@ -4,6 +4,7 @@ import { themeColor } from '../Theme';
 import { device } from '../Media.styles';
 import { facebooklink, emailaddress } from '../../constants/constants';
 import Menu from './Menu';
+import { MobileMenu } from './MobileMenu';
 
 const Container = styled.div`
     position: fixed;
@@ -131,6 +132,7 @@ const LinksBlock = () => (
 export default () => {
     return (
         <>
+            <MobileMenu />
             <Container>
                 <div>
                     <a href="/"><h1>idea<img src='/img/logo.svg' alt="my idea" /></h1></a>

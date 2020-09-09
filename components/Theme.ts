@@ -13,6 +13,7 @@ const colorsBase = {
     textWhite: '#ffffff',
     textWhiteDim: '#dddddd',
     shadow: "#2A3132",
+    whiteTransparent: "rgba(255,255,255,0.9)",
 };
 
 const colorsSemantic = {

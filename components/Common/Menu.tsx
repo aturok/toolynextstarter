@@ -1,8 +1,4 @@
 import styled from 'styled-components';
-import { HeaderVerticalPadding, HeaderLogoSize, containerDarkShadow, ContainerSidePadding, maskIconCss, containerShadow, HeaderHeight } from './Common.styles';
-import { themeColor } from '../Theme';
-import { device } from '../Media.styles';
-import { facebooklink, emailaddress } from '../../constants/constants';
 
 const menuitems = [
     ["#emailform", "form"],
@@ -10,7 +6,7 @@ const menuitems = [
     ["http://toolympus.com", "other site"],
 ];
 
-const MenuList = styled.ul`
+export const MenuList = styled.ul`
     padding: 0;
     list-style: none;
     display: flex;
