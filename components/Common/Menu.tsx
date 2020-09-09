@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { themeColor } from '../Theme';
 
 const menuitems = [
     ["#emailform", "form"],
@@ -15,6 +16,31 @@ export const MenuList = styled.ul`
 
     & > li:not(:first-child) {
         margin-left: 25px;
+    }
+
+    & > li > a {
+        display: inline-block;
+        font-weight: normal;
+        padding: 10px 0;
+        position: relative;
+        overflow-x: hidden;
+
+        & ::before {
+            content: ' ';
+            position: absolute;
+            height: 0;
+            bottom: 3px;
+            left: -300px;
+            width: 100%;
+            border-bottom: 3px solid ${themeColor(c => c.secondary)};
+            transition: all 0.4s ease;
+        }
+
+        &:hover, &.active {
+            & ::before {
+                left: 0;
+            }
+        }
     }
 `;
 
