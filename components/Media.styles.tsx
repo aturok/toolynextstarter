@@ -9,6 +9,7 @@ export const size = {
 export const device = {
     s: `(max-width: ${size.sm-1}px)`,
     sm: `(min-width: ${size.sm}px)`,
+    sXsm: `(max-width: ${size.m-1}px)`,
     smStrict: `(min-width: ${size.sm}px) and (max-width: ${size.m-1}px)`,
     m: `(min-width: ${size.m}px)`,
     l: `(min-width: ${size.l}px)`,

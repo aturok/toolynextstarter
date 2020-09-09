@@ -52,6 +52,14 @@ const Container = styled.div`
     & > div:first-child {
         justify-content: flex-start;
     }
+    & > div:nth-child(2) {
+        flex: 1 0 auto;
+        margin-left: 3em;
+        
+        @media ${device.sXsm} {
+            display: none;
+        }
+    }
     & > div:last-child {
         justify-content: flex-end;
 
@@ -125,12 +133,14 @@ export default () => {
         <>
             <Container>
                 <div>
-                <a href="/"><h1>idea<img src='/img/logo.svg' alt="my idea" /></h1></a>
-                <Line />
-                <Motto><span>find</span><span>the best </span><span>site starter</span></Motto>
+                    <a href="/"><h1>idea<img src='/img/logo.svg' alt="my idea" /></h1></a>
+                    <Line />
+                    <Motto><span>find</span><span>the best </span><span>site starter</span></Motto>
                 </div>
 
-                <Menu />
+                <div>
+                    <Menu />
+                </div>
 
                 <div>
                     <LinksBlock />
