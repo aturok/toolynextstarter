@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { CenteredContainer } from '../Common.styles';
-import { themeColor } from '../../Theme';
+import { CenteredContainer } from '../Common/Common.styles';
+import { themeColor } from '../Theme';
 
 const Container = styled(CenteredContainer)`
     padding-top: 0 !important;
@@ -13,7 +13,7 @@ const Line = styled.div`
     border-top: 1px solid ${themeColor(c => c.separator)};
 `;
 
-export default () => {
+export const Separator = () => {
     return (
         <Container>
             <Line />
