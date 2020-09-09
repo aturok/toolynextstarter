@@ -5,7 +5,7 @@ import { device } from '../Media.styles';
 
 const PersonsListCustom = styled(PersonsList)`
     @media ${device.sm} {
-        margin: 0 20%;
+        padding: 0 20%;
     }
 `;
 
