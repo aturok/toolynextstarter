@@ -14,6 +14,11 @@ export const CommonCSS = css`
         src: url('/fonts/opensans/OpenSans-Regular.ttf');
         font-weight: normal;
     }
+    @font-face {
+        font-family: 'OpenSans';
+        src: url('/fonts/opensans/OpenSans-SemiBold.ttf');
+        font-weight: 500;
+    }
 
      body {
          background: ${themeColor(c => c.background)};
