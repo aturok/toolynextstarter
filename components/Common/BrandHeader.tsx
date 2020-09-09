@@ -140,7 +140,7 @@ export default () => {
                     <Motto><span>find</span><span>the best </span><span>site starter</span></Motto>
                 </div>
 
-                <div>
+                <div id="navigation">
                     <Menu />
                 </div>
 
