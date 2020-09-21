@@ -23,6 +23,11 @@ function updateMenuState() {
     var position = $(window).scrollTop();
     position += scrollMenuActivationLead;
 
+    const path = window.location.pathname;
+
+    $('#navigation > ul > li > a[href="' + path + '"]').addClass('active');
+    $('#mobilenavigation > ul > li > a[href="' + path + '"]').addClass('active');
+
     $('#navigation > ul > li > a').each(function() {
         const href = $(this).attr("href")
         if(href[0] === "#" && href[1] !== "#") {
@@ -43,7 +48,7 @@ function updateMenuState() {
             $('#mobilenavigation > ul > li > a[href="' + href + '"]').addClass('active');
         } else {
             $('#navigation > ul > li > a[href="' + href + '"]').removeClass('active');
-            $('#mobilenavigation > ul > li > a[href="' + href + '"]').removeClass('active')
+            $('#mobilenavigation > ul > li > a[href="' + href + '"]').removeClass('active');
         }
     });
 }
