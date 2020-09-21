@@ -5,6 +5,7 @@ const menuitems = [
     ["#emailform", "form"],
     ["/mdpage", "subpage"],
     ["http://toolympus.com", "other site"],
+    ["/newyorktemp", "SSR page"],
 ];
 
 export const MenuList = styled.ul`

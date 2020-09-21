@@ -32,7 +32,7 @@ function updateMenuState() {
         var id = href.substr(1);
         var target = $("#"+id);
 
-        if (target && position >= target.offset().top) {
+        if (target && position >= target.offset()?.top) {
             $('#navigation > ul > li > a').removeClass('active');
             $('#navigation > ul > li > a[href="#' + id + '"]').addClass('active');
             $('#mobilenavigation > ul > li > a').removeClass('active');
