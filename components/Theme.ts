@@ -27,6 +27,7 @@ const colorsSemantic = {
     primaryButtonText: colorsBase.textWhite,
     separator: colorsBase.grayDim,
     footerBackground: colorsBase.shadow,
+    siteBackground: colorsBase.shadow,
     tableHeader: colorsBase.gray,
 };
 

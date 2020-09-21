@@ -20,6 +20,9 @@ MAIL_PORT
 MAIL_USER
 MAIL_PASS
 
+## Options
+
+SiteProperties.sidePadding - set to `true` if you want a padded site (central strip).
 
 ## Getting Started
 

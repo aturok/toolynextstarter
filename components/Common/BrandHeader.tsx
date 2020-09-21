@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import { HeaderVerticalPadding, HeaderLogoSize, containerDarkShadow, ContainerSidePadding, maskIconCss, containerShadow, HeaderHeight } from './Common.styles';
+import { HeaderVerticalPadding, HeaderLogoSize, containerDarkShadow, ContainerSidePadding, maskIconCss, containerShadow, HeaderHeight, SiteSidePadding } from './Common.styles';
 import { themeColor } from '../Theme';
 import { device } from '../Media.styles';
 import { facebooklink, emailaddress } from '../../constants/constants';
 import Menu from './Menu';
 import { MobileMenu } from './MobileMenu';
+import { SiteProperties } from '../../constants/SiteProperties';
 
 const Container = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 200;
     min-height: ${HeaderHeight}px;
 
@@ -22,12 +22,21 @@ const Container = styled.div`
     display: flex;
     flex-flow: row;
     align-items: center;
-    
-    @media ${device.sm} {
+
+    @media ${device.m} {
+        width: ${SiteProperties.sidePadding ? `calc(100% - 2*${SiteSidePadding})` : "100%"};
+        margin-left: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
+        margin-right: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
+        padding: ${HeaderVerticalPadding}px ${ContainerSidePadding}px;
+        justify-content: space-between;
+    }    
+    @media ${device.smStrict} {
+        width: 100%;
         padding: ${HeaderVerticalPadding}px ${ContainerSidePadding}px;
         justify-content: space-between;
     }
     @media ${device.s} {
+        width: 100%;
         padding: ${HeaderVerticalPadding}px 0;
         justify-content: center;
     }

@@ -1,7 +1,9 @@
 import { css } from 'styled-components';
+import { SiteProperties } from '../../constants/SiteProperties';
+import { device } from '../Media.styles';
 
 import { themeColor } from '../Theme';
-import { HeaderHeight } from './Common.styles';
+import { HeaderHeight, SiteSidePadding } from './Common.styles';
 
 export const CommonCSS = css`
     @font-face {
@@ -53,6 +55,7 @@ export const CommonCSS = css`
         padding: 0;
         margin: 0;
         min-height: 100vh;
+        background: ${themeColor(c => c.siteBackground)};
 
         & > #__next {
             min-height: 100%;
@@ -61,6 +64,11 @@ export const CommonCSS = css`
 
     body {
         padding-top: ${HeaderHeight}px;
+
+        @media ${device.m} {
+            padding-left: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
+            padding-right: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
+        }
     }
 
     html {

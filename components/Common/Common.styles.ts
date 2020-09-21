@@ -4,9 +4,10 @@ import { device } from '../Media.styles';
 
 export const HeaderLogoSize = 70;
 export const HeaderVerticalPadding = 10;
-export const HeaderHeight = 100;
+export const HeaderHeight = 115;
 export const ContainerSidePadding = 40;
 export const ContainerSidePaddingS = 20;
+export const SiteSidePadding = "20%";
 
 export const Main = styled.main`
     min-height: calc(100% - ${HeaderHeight}px - 200px);
@@ -14,6 +15,7 @@ export const Main = styled.main`
 
 export const CenteredContainer = styled.div`
     text-align: center;
+    background: ${themeColor(c => c.background)};
     @media ${device.sm} {
         padding: 30px ${ContainerSidePadding}px;
     }
