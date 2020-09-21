@@ -25,6 +25,7 @@ export const CenteredContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
+    background: ${themeColor(c => c.background)};
     text-align: left;
     @media ${device.sm} {
         padding: 30px 25%;

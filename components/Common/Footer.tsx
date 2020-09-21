@@ -3,6 +3,7 @@ import { CenteredContainer, containerShadow } from './Common.styles';
 import { themeColor } from '../Theme';
 import { emailaddress } from '../../constants/constants';
 import { Scripts } from './Scripts';
+import { useLanguage } from '../Localization/LanguageContext';
 
 const Attribution = styled.p`    
 `;
@@ -24,6 +25,7 @@ const Container = styled(CenteredContainer)`
 `;
 
 export default () => {
+    const { t } = useLanguage();
     return (
         <Container>
             <div>
@@ -33,6 +35,7 @@ export default () => {
             </div>
             <Attribution>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="blank">www.flaticon.com</a></Attribution>
             <Attribution>Photo by Ave Calvar Martinez from Pexels</Attribution>
+            <Attribution>{t("localizableText")}</Attribution>
             
             <Scripts />
         </Container>);

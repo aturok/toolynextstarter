@@ -3,7 +3,8 @@ import { themeColor } from '../Theme';
 
 const menuitems = [
     ["/#emailform", "form"],
-    ["/mdpage", "subpage"],
+    ["/en/mdpage", "subpage en"],
+    ["/ru/mdpage", "subpage ru"],
     ["http://toolympus.com", "other site"],
     ["/newyorktemp", "SSR page"],
 ];
