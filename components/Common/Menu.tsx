@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { themeColor } from '../Theme';
 
 const menuitems = [
-    ["#emailform", "form"],
+    ["/#emailform", "form"],
     ["/mdpage", "subpage"],
     ["http://toolympus.com", "other site"],
     ["/newyorktemp", "SSR page"],
