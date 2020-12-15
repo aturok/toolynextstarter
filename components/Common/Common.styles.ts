@@ -16,10 +16,9 @@ export const Main = styled.main`
 export const CenteredContainer = styled.div`
     text-align: center;
     background: ${themeColor(c => c.background)};
-    @media ${device.sm} {
-        padding: 30px ${ContainerSidePadding}px;
-    }
-    @media ${device.s} {
+    padding: 30px ${ContainerSidePadding}px;
+
+    @media ${device.s}, ${device.sm} {
         padding: 30px ${ContainerSidePaddingS}px;
     }
 `;
@@ -27,10 +26,9 @@ export const CenteredContainer = styled.div`
 export const TextContainer = styled.div`
     background: ${themeColor(c => c.background)};
     text-align: left;
-    @media ${device.sm} {
-        padding: 30px 25%;
-    }
-    @media ${device.s} {
+    padding: 30px 25%;
+
+    @media ${device.s}, ${device.sm} {
         padding: 30px ${ContainerSidePaddingS}px;
     }
 `;
@@ -74,7 +72,7 @@ export const maskIconCss = (img: string, color: string | propsColor, w: number, 
     width: ${w}px;
     height: ${h}px;
     background: ${color};
-    margin-right: ${fieldWidth-w}px;
+    margin-left: ${fieldWidth-w}px;
     flex-shrink: 0;
 `;
 
@@ -122,6 +120,10 @@ export const Form = styled.form`
         border: 1px solid ${themeColor(c => c.primary)};
         outline: none;
         background: ${themeColor(c => c.background)};
+
+        @media ${device.s} {
+            width: 80%;
+        }
     }
 
     & > input[type="submit"] {
@@ -146,11 +148,9 @@ export const ActionItem = styled.li`
         display: flex;
         flex-flow: column;
         align-items: center;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding: 30px;
     }
+    
     & > div:first-child {
         background: ${themeColor(c => c.prosHighlight)};
         color: ${themeColor(c => c.prosHighlightText)};
@@ -172,27 +172,22 @@ export const ActionItem = styled.li`
 export const ProsList = styled.ul`
     display: flex;
     padding: 0;
+    flex-flow: row wrap;
+    justify-content: center;
 
     & > li {
+        margin: 30px;
+        width: 25%;
         ${itemShadow}
         border: 1px solid ${themeColor(c => c.grayDim)};
-        
+
         & :hover {
             transform: translate(-2px, -2px);
         }
         transition: 0.5s ease all;
     }
 
-    @media ${device.m} {
-        flex-flow: row wrap;
-        justify-content: center;
-
-        & > li {
-            margin: 30px;
-            width: 25%;
-        }
-    }
-    @media ${device.smStrict} {
+    @media ${device.tablet} {
         flex-flow: row wrap;
         justify-content: center;
 
@@ -201,7 +196,7 @@ export const ProsList = styled.ul`
             width: 33%;
         }
     }
-    @media ${device.s} {
+    @media ${device.s}, ${device.sm} {
         flex-flow: column;
         justify-content: flex-start;
         align-items: center;

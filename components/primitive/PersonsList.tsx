@@ -8,7 +8,7 @@ export const Photo = styled.div`
     height: 200px;
     border-radius: 100px;
     overflow: hidden;
-    ${itemShadow}
+    ${itemShadow};
 
     & > img {
         width: 200px;
@@ -19,21 +19,21 @@ export const Photo = styled.div`
 export const PersonsList = styled.ul`
     list-style: none;
     padding: 0;
+    margin: 0;
     width: 100%;
     display: flex;
     flex-flow: column;
+    justify-content: flex-start;
 
     & > li {
         padding: 2em 0;
         border-bottom: 1px solid ${themeColor(c => c.separator)};
         display: flex;
 
-        @media ${device.sm} {
-            flex-flow: row;
-            justify-content: flex-start;
-        }
-        @media ${device.s} {
+        @media ${device.s}, ${device.sm} {
+            padding: 1em 0;
             flex-flow: column;
+            justify-content: center;
         }
     }
 
@@ -42,11 +42,9 @@ export const PersonsList = styled.ul`
         flex-flow: column;
         align-items: center;
         flex-shrink: 0;
+        width: 30%;
 
-        @media ${device.sm} {
-            width: 30%;
-        }
-        @media ${device.s} {
+        @media ${device.s}, ${device.sm} {
             width: 100%;
             margin-bottom: 1em;
         }
@@ -57,12 +55,11 @@ export const PersonsList = styled.ul`
         display: flex;
         flex-flow: column;
         justify-content: center;
+        padding-left: 15%;
 
-        @media ${device.sm} {
-            padding-left: 2em;
-        }
-        @media ${device.s} {
+        @media ${device.s}, ${device.sm} {
             text-align: center;
+            padding: 0;
         }
 
         & > span {
@@ -71,5 +68,12 @@ export const PersonsList = styled.ul`
         & > span:first-of-type {
             font-weight: 500;
         }
+
+        & > p {
+            margin: 10px 0px 0px 0px;
+
+        }
     }
+
+
 `;

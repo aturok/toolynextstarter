@@ -64,17 +64,15 @@ export const CommonCSS = css`
 
     body {
         padding-top: ${HeaderHeight}px;
+        padding-left: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
+        padding-right: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
 
-        @media ${device.m} {
-            padding-left: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
-            padding-right: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
-        }
     }
 
     html {
         scroll-behavior: smooth;
     }
-        
+
     * {
         box-sizing: border-box;
     }

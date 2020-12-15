@@ -6,9 +6,7 @@ import Menu, { MenuList } from './Menu';
 
 const MenuWrapper = styled.div`
     display: none;
-
-    @media ${device.sXsm} {
-        &.active {
+    &.active {
             position: fixed;
             display: block;
             z-index: 300;
@@ -18,7 +16,6 @@ const MenuWrapper = styled.div`
             bottom: 0;
             background: ${themeColor(c => c.background)};
         }
-    }
 `;
 
 const Container = styled.nav`
@@ -62,12 +59,10 @@ const Button = styled.a`
     padding: 12px 10px 10px 10px;
     border-radius: ${5}px;
     background: ${themeColor(c => c.whiteTransparent)};
+    display: block;
 
-    @media ${device.sm} {
+    @media ${device.landscapeTablets}, ${device.l} {
         display: none;
-    }
-    @media ${device.sXsm} {
-        display: block;
     }
 `;
 

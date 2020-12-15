@@ -4,14 +4,13 @@ import { PersonsList, Photo } from '../primitive/PersonsList';
 import { device } from '../Media.styles';
 
 const PersonsListCustom = styled(PersonsList)`
-    @media ${device.sm} {
-        padding: 0 20%;
-    }
+    padding: 0 20%;
+
 `;
 
 export const ExamplePeopleBlock = () => {
     const persons = [
-        ["Dave Butcher", "/img/people/dave.jpg", "Does things, goes wild"],
+        ["Dave Butcher", "/img/people/dave.jpg", <><p>Does things, goes wild</p></>],
         ["Gray Ushu", "/img/people/ushu.jpg", <><p>Heavy <b>hitter</b></p><p>Tough eater</p></>],
     ];
 

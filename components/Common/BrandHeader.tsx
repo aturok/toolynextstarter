@@ -13,8 +13,11 @@ const Container = styled.div`
     left: 0;
     z-index: 200;
     min-height: ${HeaderHeight}px;
-
-
+    width: ${SiteProperties.sidePadding ? `calc(100% - 2*${SiteSidePadding})` : "100%"};
+    margin-left: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
+    margin-right: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
+    padding: ${HeaderVerticalPadding}px ${ContainerSidePadding}px;
+    justify-content: space-between;
     background: ${themeColor(c => c.ribbon)};
     color: ${themeColor(c => c.ribbonText)};
     ${containerDarkShadow}
@@ -23,19 +26,12 @@ const Container = styled.div`
     flex-flow: row;
     align-items: center;
 
-    @media ${device.m} {
-        width: ${SiteProperties.sidePadding ? `calc(100% - 2*${SiteSidePadding})` : "100%"};
-        margin-left: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
-        margin-right: ${SiteProperties.sidePadding ? SiteSidePadding : "0"};
-        padding: ${HeaderVerticalPadding}px ${ContainerSidePadding}px;
-        justify-content: space-between;
-    }    
-    @media ${device.smStrict} {
+    @media ${device.tablet} {
         width: 100%;
         padding: ${HeaderVerticalPadding}px ${ContainerSidePadding}px;
         justify-content: space-between;
     }
-    @media ${device.s} {
+    @media ${device.s}, ${device.sm} {
         width: 100%;
         padding: ${HeaderVerticalPadding}px 0;
         justify-content: center;
@@ -64,16 +60,16 @@ const Container = styled.div`
     }
     & > div:nth-child(2) {
         flex: 1 0 auto;
-        margin-left: 3em;
-        
-        @media ${device.sXsm} {
+        margin: 0 1em;
+
+        @media ${device.s}, ${device.sm}, ${device.tablet} {
             display: none;
         }
     }
     & > div:last-child {
         justify-content: flex-end;
 
-        @media ${device.s} {
+        @media ${device.s}, ${device.sm} {
             display: none;
         }
     }
@@ -113,12 +109,10 @@ const MobileSubheaderContainer = styled.div`
     width: 100%;
     background: ${themeColor(c => c.ribbon)};
     color: ${themeColor(c => c.ribbonText)};
-    ${containerShadow}
-    
-    @media ${device.sm} {
-        display: none;
-    }
-    @media ${device.s} {
+    ${containerShadow};
+    display: none;
+
+    @media ${device.s}, ${device.sm} {
         display: flex;
         flex-flow: row;
         align-items: center;
