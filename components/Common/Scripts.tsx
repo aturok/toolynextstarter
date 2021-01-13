@@ -6,5 +6,6 @@ export const Scripts = () => (
         <script src="/js/owl.carousel.min.js"></script>
         <script src="/js/init.js"></script>
         <script src="/js/menu.js"></script>
+        <script src="/js/cookie.js"></script>
     </>
 );
