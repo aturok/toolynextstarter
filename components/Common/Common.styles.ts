@@ -10,7 +10,6 @@ export const ContainerSidePaddingS = 20;
 export const SiteSidePadding = "20%";
 export const CookieHeight = 70;
 
-
 export const Main = styled.main`
     min-height: calc(100% - ${HeaderHeight}px - 200px);
 `;
