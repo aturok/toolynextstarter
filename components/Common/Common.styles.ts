@@ -8,6 +8,7 @@ export const HeaderHeight = 115;
 export const ContainerSidePadding = 40;
 export const ContainerSidePaddingS = 20;
 export const SiteSidePadding = "20%";
+export const CookieHeight = 70;
 
 export const Main = styled.main`
     min-height: calc(100% - ${HeaderHeight}px - 200px);
@@ -150,7 +151,7 @@ export const ActionItem = styled.li`
         align-items: center;
         padding: 30px;
     }
-    
+
     & > div:first-child {
         background: ${themeColor(c => c.prosHighlight)};
         color: ${themeColor(c => c.prosHighlightText)};

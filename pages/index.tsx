@@ -3,6 +3,7 @@ import BrandHeader from '../components/Common/BrandHeader';
 import HeaderImage from '../components/Common/HeaderImage';
 import Footer from '../components/Common/Footer';
 import { Main } from '../components/Common/Common.styles';
+import { CookieBlock } from '../components/Common/Cookie';
 
 import { ExampleBlock } from '../components/Main/ExampleBlock';
 import { ExampleForm } from '../components/Main/ExampleForm';
@@ -27,5 +28,6 @@ export default function Home() {
         </Main>
 
         <Footer />
+        <CookieBlock/>
       </>);
 }

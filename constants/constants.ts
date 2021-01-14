@@ -5,3 +5,6 @@ export const siteDescription = "A beautiful (not really) template for a simple w
 export const ogImage = "https://yourcoolwebsite.com/sharing/site/img";
 export const ogType = "website";
 export const ogUrl = "https://yourcoolwebsite.com";
+export const cookieMessage = "This site uses cookies.";
+export const cookieLink = "What does that mean?";
+export const cookiesExplanationURL = "https://simple.wikipedia.org/wiki/HTTP_cookie";
