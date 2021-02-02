@@ -2,7 +2,7 @@ import Head from '../../components/Common/Head';
 import BrandHeader from '../../components/Common/BrandHeader';
 import Footer from '../../components/Common/Footer';
 import { Main, TextContainer } from '../../components/Common/Common.styles';
-import ReactMarkdown from 'react-markdown/with-html';
+import { Markdown } from '../../components/Common/Markdown';
 import { readPage } from '../../api/pages';
 import { forLanguage, LanguageContext } from '../../components/Localization/LanguageContext';
 
@@ -15,7 +15,7 @@ export default function MDPage(page) {
 
         <Main>
             <TextContainer>
-                <ReactMarkdown escapeHtml={false} source={page.content} />
+                <Markdown source={page.content} />
             </TextContainer>
         </Main>
 
