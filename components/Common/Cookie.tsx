@@ -2,6 +2,7 @@ import {cookieMessage, cookieLink, cookiesExplanationURL} from '../../constants/
 import styled from 'styled-components';
 import { themeColor } from '../Theme';
 import { buttonCss, CookieHeight, containerShadow } from '../Common/Common.styles';
+import { device } from '../Media.styles';
 
 const CookieWrapper = styled.div`
   display: none;
@@ -10,6 +11,10 @@ const CookieWrapper = styled.div`
   bottom: 0px;
   width: 100%;
   height: ${CookieHeight}px;
+
+  @media ${device.s}, ${device.sm}, ${device.tablet} {
+      height: auto;
+  }
   ${containerShadow};
 
   align-items: center;
