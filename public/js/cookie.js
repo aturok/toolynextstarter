@@ -8,7 +8,9 @@ window.onload = function () {
 		localStorage.setItem("cookiesaccepted", document.cookie);
 	}
 
-	okButton.addEventListener("click", cookieHandler);
+    if(okButton) {
+        okButton.addEventListener("click", cookieHandler);
+    }
 
 	const isCookieInLS = localStorage.getItem("cookiesaccepted");
 
